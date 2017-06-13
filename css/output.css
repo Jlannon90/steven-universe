@@ -53,9 +53,13 @@ html, body {
     margin: 20px;
     -webkit-filter: drop-shadow(5px 5px 5px #222);
     filter: drop-shadow(5px 5px 5px #222); }
+    .flex-container .gem:hover {
+      height: 90px; }
     @media only screen and (max-width: 850px) {
       .flex-container .gem {
-        height: 30px; } }
+        height: 30px; }
+        .flex-container .gem:hover {
+          height: 50px; } }
   .flex-container h1 {
     height: 30px;
     align-self: center;
@@ -107,6 +111,10 @@ html, body {
     font-family: crewniverse;
     font-size: 15px;
     text-shadow: 2px 2px 2px #891343; }
+    .flex-container button:hover {
+      width: 250px;
+      height: 65px;
+      cursor: pointer; }
 
 .navbar {
   display: flex;
@@ -122,6 +130,11 @@ html, body {
       -webkit-text-stroke-width: 1px;
       -webkit-text-stroke-color: black;
       margin-right: 10px; }
+      .navbar ul li:hover {
+        color: #fb5990;
+        -webkit-text-stroke-color: white;
+        text-shadow: 3px 3px 2px black;
+        cursor: pointer; }
       @media only screen and (max-width: 850px) {
         .navbar ul li {
           display: block;
@@ -153,6 +166,11 @@ html, body {
       -webkit-text-stroke-width: 2px;
       -webkit-text-stroke-color: black;
       text-shadow: 3px 3px 2px #87915a; }
+      .search-bar ul li:hover {
+        color: #87915a;
+        -webkit-text-stroke-color: white;
+        text-shadow: 3px 3px 2px black;
+        cursor: pointer; }
       @media only screen and (max-width: 850px) {
         .search-bar ul li {
           display: block; } }
@@ -169,11 +187,16 @@ html, body {
     -webkit-text-stroke-color: black; }
     .search-bar h4 .fa {
       font-size: 20px; }
+    .search-bar h4:hover {
+      color: #87915a;
+      -webkit-text-stroke-color: white;
+      text-shadow: 3px 3px 2px black;
+      cursor: pointer; }
     @media only screen and (max-width: 850px) {
       .search-bar h4 {
         align-self: flex-start;
         position: absolute;
-        right: 30; } }
+        right: 0; } }
 
 .gallery {
   display: flex;
