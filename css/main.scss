@@ -1,3 +1,11 @@
+$phone-breakpoint: "only screen and (max-width:850px)";
+
+@mixin phone-breakpoint {
+  @media #{$phone-breakpoint} {
+    @content;
+  }
+}
+
 @font-face {
   font-family: crewniverse;
   src: url('../fonts/crewniverse_font.ttf')
@@ -9,6 +17,7 @@ html, body {
 
 .large-images {
   display: flex;
+  justify-content: space-between;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -23,6 +32,7 @@ html, body {
 
 .small-images {
   display: flex;
+  justify-content: space-between;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -34,6 +44,19 @@ html, body {
     margin-left: 20px;
   }
 }
+
+.icon-style {
+  margin: 15px;
+  height: 40px;
+  opacity: .65;
+  align-self:flex-start;
+  -webkit-filter: drop-shadow(5px 5px 5px #222);
+  filter: drop-shadow(5px 5px 5px #222);
+  // &:hover {
+  //
+  // }
+}
+
 
 .flex-container {
   display: flex;
@@ -50,6 +73,10 @@ html, body {
     margin: 20px;
     -webkit-filter: drop-shadow(5px 5px 5px #222);
     filter: drop-shadow(5px 5px 5px #222);
+
+    @include phone-breakpoint {
+      height: 30px;
+    }
   }
 
 
@@ -64,6 +91,11 @@ html, body {
     font-size: 70px;
     margin-top: 30px;
     text-shadow: 4px 4px 2px #fb5990, 5px 5px 2px #891343;
+    @include phone-breakpoint {
+      font-size: 45px;
+      text-align: center;
+      margin-top: 40px;
+    }
 
   }
 
@@ -76,6 +108,10 @@ html, body {
     -webkit-text-stroke-color: black;
     font-size: 40px;
     text-shadow: 4px 4px 2px #fb5990, 5px 5px 2px #891343;
+    @include phone-breakpoint {
+      font-size: 20px;
+      text-align: center;
+    }
   }
 
   .logo {
@@ -123,6 +159,10 @@ html, body {
       -webkit-text-stroke-width: 1px;
       -webkit-text-stroke-color: black;
       margin-right: 10px;
+      @include phone-breakpoint {
+        display: block;
+        text-align: right;
+      }
     }
   }
 }
@@ -138,10 +178,15 @@ html, body {
   border-top: 3px solid #87915a;
   border-bottom: 3px solid #87915a;
   text-shadow: 3px 3px 2px #87915a;
+  @include phone-breakpoint {
+    justify-content: flex-start;
+    position: relative;
+  }
     ul  {
-      height: 50px;
-      display: flex;
       align-items: center;
+      @include phone-breakpoint {
+        padding-left: 0;
+      }
       li  {
         display: inline-block;
         margin-left: 25px;
@@ -149,10 +194,18 @@ html, body {
         -webkit-text-stroke-width: 2px;
         -webkit-text-stroke-color: black;
         text-shadow: 3px 3px 2px #87915a;
+        @include phone-breakpoint {
+          display: block;
+        }
+
       }
       li:nth-child(5) {
         border-left: 2px solid #87915a;
         padding-left: 25px;
+        @include phone-breakpoint {
+          border-left: none;
+          padding-left: 0;
+        }
       }
     }
     h4 {
@@ -161,6 +214,11 @@ html, body {
       -webkit-text-stroke-color: black;
       .fa {
         font-size: 20px;
+      }
+      @include phone-breakpoint {
+        align-self: flex-start;
+        position: absolute;
+        right: 30px;
       }
     }
 }
@@ -176,31 +234,49 @@ html, body {
   .fight {
     background-image: url("../img/fight.jpg");
     @extend .large-images;
+    img  {
+      @extend .icon-style;
+    }
   }
 
   .steven {
     background-image: url("../img/steven.jpg");
     @extend .small-images;
+    img  {
+      @extend .icon-style;
+    }
   }
 
   .garnet {
     background-image: url("../img/garnet.png");
     @extend .small-images;
+    img  {
+      @extend .icon-style;
+    }
   }
 
   .amethyst {
     background-image: url("../img/amethyst.png");
     @extend .small-images;
+    img  {
+      @extend .icon-style;
+    }
   }
 
   .pearl {
     background-image: url("../img/pearl.png");
     @extend .small-images;
+    img  {
+      @extend .icon-style;
+    }
   }
 
   .band {
     background-image: url("../img/band.png");
     @extend .large-images;
+    img  {
+      @extend .icon-style;
+    }
   }
 
   h4  {
