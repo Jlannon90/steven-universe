@@ -33,10 +33,11 @@ html, body {
 .icon-style, .gallery .fight img, .gallery .steven img, .gallery .garnet img, .gallery .amethyst img, .gallery .pearl img, .gallery .band img {
   margin: 15px;
   height: 40px;
-  opacity: .65;
   align-self: flex-start;
   -webkit-filter: drop-shadow(5px 5px 5px #222);
   filter: drop-shadow(5px 5px 5px #222); }
+  .icon-style:hover, .gallery .fight img:hover, .gallery .steven img:hover, .gallery .garnet img:hover, .gallery .amethyst img:hover, .gallery .pearl img:hover, .gallery .band img:hover {
+    height: 60px; }
 
 .flex-container {
   display: flex;
@@ -172,7 +173,7 @@ html, body {
       .search-bar h4 {
         align-self: flex-start;
         position: absolute;
-        right: 30px; } }
+        right: 30; } }
 
 .gallery {
   display: flex;

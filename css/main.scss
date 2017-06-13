@@ -48,13 +48,13 @@ html, body {
 .icon-style {
   margin: 15px;
   height: 40px;
-  opacity: .65;
+  // opacity: .65;
   align-self:flex-start;
   -webkit-filter: drop-shadow(5px 5px 5px #222);
   filter: drop-shadow(5px 5px 5px #222);
-  // &:hover {
-  //
-  // }
+  &:hover {
+    height: 60px;
+  }
 }
 
 
@@ -218,7 +218,7 @@ html, body {
       @include phone-breakpoint {
         align-self: flex-start;
         position: absolute;
-        right: 30px;
+        right: 30;
       }
     }
 }
